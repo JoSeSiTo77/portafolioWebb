@@ -1,0 +1,341 @@
+*{
+    margin: 0;    box-sizing: border-box;
+}
+@font-face {
+    font-family: "mifuente";
+    /* Nombre que tú elijas */
+    src: url("../fonts/Montserrat-Italic-VariableFont_wght.ttf") format("woff2");
+}
+body, html {
+    margin: 0;
+    height: 100vh;
+    background: radial-gradient(circle, #4d4d4d 0%, rgba(8, 3, 32, 0.85) 100%);
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+  /* Primera pantalla */
+.gcontenido {
+    z-index: 1;
+    padding: 20px;
+    height: 100%;
+}
+
+/* Pantalla de bienvenida más animaciones*/
+.tbienvenida{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 11;
+    font-family: "mifuente";
+    animation: aparece 4s linear forwards,
+                desaparecertb 2s 5s cubic-bezier(.38,.76,.58,.37) forwards;
+}
+.respaldo{
+    background-color: black;
+    width: 100%; height: 100%;
+    animation: desaparece 3s 6s linear forwards;
+    z-index: 10;
+}
+.bienvenida {
+    opacity: 0;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: black;
+    background-image: linear-gradient(to bottom right, transparent 45%, rgba(11, 2, 65, 0.85) 50%, rgba(11, 2, 65, 0.85) 54%, #0a0131 62%, rgba(29, 8, 134, 0) 72%);
+    background-size: 1000% 1000%;
+    background-repeat: no-repeat;
+    animation: aparece 2s linear forwards,
+                desaparece 4s 6s linear forwards,
+                movimientodiago 10s cubic-bezier(.38,.76,.58,.37);
+}
+
+@keyframes aparece {
+    50%{
+        opacity:.5;
+    }
+    100%{ 
+        opacity: 1; 
+    }
+}
+@keyframes desaparece {
+    0%{ 
+        opacity: 1;
+    }
+    25%{ 
+        opacity: .6;
+    }
+    50%{ 
+        opacity: .4; 
+    }
+    75%{
+        opacity: .2;
+    }
+    100%{ 
+        opacity: 0;
+        z-index: 0;
+    }  
+}
+@keyframes desaparecertb {
+    to{
+        opacity: 0;
+    }
+}
+@keyframes movimientodiago {
+    0%{
+        background-position: -50% -50%; 
+    }
+    30%{
+        background-position: 20% 20%; 
+    }45%{
+        background-position: 45% 45%;
+    }55%{
+        background-position: 55% 55%;
+    }
+    75%{
+        background-position: 95% 95%;
+    }
+    100%{
+        background-position: 150% 150%; 
+    }
+}
+
+.gcontenido *{
+    display: none;
+}
+.gcontenido{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Presentación principal más animaciones */
+.section *{
+    display: block;
+    margin-top: 10%;
+}
+.section{
+    height: 60%; width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 2%;
+    font-family: "mifuente";
+    font-weight: bold;
+}
+.linea{
+    width: 100%;
+    animation-duration: 1000ms;
+    /* animation-delay: 9s; */
+}
+.nombre{
+    color: white;
+    font-size: 50px;
+    animation-duration: 1000ms;
+    /* animation-delay: 9s; */
+}
+.introduccion{
+    font-size: 20px;
+    font-weight: normal;
+    /* animation-delay: 9.1s; */
+}
+.contactame{
+    text-decoration: none;
+    padding: 5%;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    width: 35%;
+    cursor: pointer;
+    transition: background-color 350ms;
+    /* animation-delay: 9.2s; */
+}
+.contactame:hover{
+    background-color: rgba(255, 255, 255, 0.767);
+}
+
+
+/* Contenedores de información general */
+.contenido2{
+    display: block;
+    display: flex;
+    height: 100%; width: 100%;
+}
+.main{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; width: 70%;
+    transition: opacity 350ms;
+}
+.containers{
+    position: absolute;
+    background-color: white;
+    border-radius: 20px;
+    height: 100%; width: 40%;
+    z-index: 2;
+    transition: opacity 350ms;
+    cursor: pointer;
+}
+.flotante{
+    animation: flotante 3s linear infinite alternate;
+}
+@keyframes flotante {
+    0%{top: 0%;}
+    50%{top: 8%;}
+    100%{top: 0%;}
+}
+.footer{
+    display: block;
+    height: 15%; width: 30%;
+    margin-left: 50%;
+    background-color: rgba(0, 0, 0, 0.178);
+    border-radius: 50%;
+    animation: sombra 3s linear infinite alternate;
+    z-index: 1;
+}
+
+@keyframes sombra {
+    0%   {transform: scale(1);}
+    50%  {transform: scale(1.03);}
+    100% {transform: scale(1); }
+}
+.main *{
+    display: block;
+}
+.carddes{
+    opacity: 0;
+}
+
+.ftperfi{
+    background-color: red;
+    background-image: url(../images/fotoperfil.jpg);
+    background-position: 0 35%;
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 60%; width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+.content{
+    height: 40%; width: 100%;
+    font-family: "mifuente";
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    display:flex;
+    align-items: center;
+}
+
+
+.texto{
+    font-family: "mifuente";
+}
+.texto h1{
+    font-size: 20px;
+}
+
+
+.container2, .container3, .container4{
+    display: none;
+}
+.container2{
+    display: flex;
+    justify-content: space-around;
+}
+.container2 *{
+    object-fit: contain;
+    height: 50%; width: 50%;
+}
+.container3{
+    background-color: blue;
+}
+.container4{
+    background-color: red;
+}
+
+
+
+
+/* Segunda pantalla */
+.gcontenido2{
+    height: 100vh; width: 100%;
+    background-color: red;
+}
+
+/* Animación diagonal hacia pantalla2 */
+@keyframes moverADestino {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(-650px, 105vh);
+    }
+}
+
+.moviendo {
+    animation: moverADestino 1.2s ease-in-out forwards;
+    z-index: 1000;
+}
+
+@keyframes moverADestino {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(-650px, 105vh);
+    }
+}
+
+
+
+.gcontenido3{
+    position: absolute;
+    top:0; right: -100%;
+    background-color: transparent;
+    height: 100%; width: 60%;
+    border-radius: 50% 0 0 0;
+    transition: transform 350ms;
+}
+.reaparecer{
+    transform: translateX(-160%);
+}
+.form-contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%; width: 100%;
+}
+.formularios{
+    border-radius: 20px;
+    border: none;
+    background-color: white;
+    height: 10%; width: 40%;
+    text-align: center;
+    align-items: center;
+    caret-color: black;
+}
+.btnformulario{
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    font-family: "mifuente";
+    font-weight: bold;
+    padding: 30px;
+}
+.formulario4 {
+    width: 70%;
+    height: 200px;
+    resize: vertical;
+    padding: 10px;
+    font-size: 16px;
+}
+.formulario::placeholder{
+    color: black;
+}
+
+
