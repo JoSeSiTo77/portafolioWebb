@@ -207,8 +207,15 @@ window.addEventListener("wheel",(e)=>{
         cards.forEach((card, i) => {
             if(card.classList.contains("central")){
                 
-                if(i===0) contactame.classList.remove("contactamedes");
-                else contactame.classList.add("contactamedes");
+               setTimeout(() => {
+            if(i===0){
+                contactame.classList.remove("contactamedes");
+                contactame.style.pointerEvents = "all";
+            } else {
+                contactame.classList.add("contactamedes");
+                contactame.style.pointerEvents = "none";
+            }
+        }, 0);
             }
             if(card.classList.contains("central")){
                 switch(i){
@@ -247,3 +254,4 @@ window.addEventListener("wheel",(e)=>{
 
     },200);
 });
+
