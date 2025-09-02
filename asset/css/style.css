@@ -191,6 +191,8 @@ body::-webkit-scrollbar{
     height: 100%; width: 40%;
     transition: opacity 350ms;
     cursor: pointer;
+    /*  Esto debe quitarse para desarrollar la siguiente parte del portafolio, mientras tanto, este camino seguirá cerrado:  */
+    pointer-events: none !important;
 }
 .flotante{
     animation: flotante 3s linear infinite alternate;
@@ -359,6 +361,7 @@ body::-webkit-scrollbar{
 .formulario::placeholder{
     color: black;
 }
+
 
 
 
