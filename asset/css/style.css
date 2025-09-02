@@ -1,15 +1,23 @@
+:root{
+    --c1:#4d4d4d;
+    --c2:rgba(111, 71, 62);
+}
 *{
-    margin: 0;    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
 }
 @font-face {
     font-family: "mifuente";
-    /* Nombre que tú elijas */
     src: url("../fonts/Montserrat-Italic-VariableFont_wght.ttf") format("woff2");
 }
 body, html {
     margin: 0;
     height: 100vh;
-    background: radial-gradient(circle, #4d4d4d 0%, rgba(8, 3, 32, 0.85) 100%);
+}
+body{
+    background-image: radial-gradient(circle, var(--c1) 0%, var(--c2) 100%);
+    transition: backgroundImage 200ms;
 }
 body::-webkit-scrollbar{
     display: none;
@@ -21,7 +29,7 @@ body::-webkit-scrollbar{
     height: 100%;
 }
 
-/* Pantalla de bienvenida más animaciones*/
+/* Pantalla de bienvenida + animaciones*/
 .tbienvenida{
     position: absolute;
     top: 50%; left: 50%;
@@ -116,6 +124,7 @@ body::-webkit-scrollbar{
     margin-top: 10%;
 }
 .section{
+    position: absolute;
     height: 60%; width: 30%;
     display: flex;
     flex-direction: column;
@@ -138,7 +147,7 @@ body::-webkit-scrollbar{
 .introduccion{
     font-size: 20px;
     font-weight: normal;
-    /* animation-delay: 9.1s; */
+   /* animation-delay: 9.1s; */
 }
 .contactame{
     text-decoration: none;
@@ -154,7 +163,9 @@ body::-webkit-scrollbar{
 .contactame:hover{
     background-color: rgba(255, 255, 255, 0.767);
 }
-
+.contactamedes{
+    display: none;
+}
 
 /* Contenedores de información general */
 .contenido2{
@@ -165,18 +176,18 @@ body::-webkit-scrollbar{
 .main{
     position: relative;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%; width: 70%;
     transition: opacity 350ms;
+    margin-left: 30%;
+    animation-delay: 9.4s;
 }
 .containers{
     position: absolute;
     background-color: white;
     border-radius: 20px;
     height: 100%; width: 40%;
-    z-index: 2;
     transition: opacity 350ms;
     cursor: pointer;
 }
@@ -188,16 +199,18 @@ body::-webkit-scrollbar{
     50%{top: 8%;}
     100%{top: 0%;}
 }
-.footer{
+.footer, .footer2{
     display: block;
     height: 15%; width: 30%;
     margin-left: 50%;
     background-color: rgba(0, 0, 0, 0.178);
     border-radius: 50%;
-    animation: sombra 3s linear infinite alternate;
     z-index: 1;
 }
-
+.footer2des{display:none;}
+.sombra{
+    animation: sombra 3s linear infinite alternate;
+}
 @keyframes sombra {
     0%   {transform: scale(1);}
     50%  {transform: scale(1.03);}
@@ -211,7 +224,6 @@ body::-webkit-scrollbar{
 }
 
 .ftperfi{
-    background-color: red;
     background-image: url(../images/fotoperfil.jpg);
     background-position: 0 35%;
     background-size:cover;
@@ -236,32 +248,38 @@ body::-webkit-scrollbar{
 .texto h1{
     font-size: 20px;
 }
-
-
-.container2, .container3, .container4{
-    display: none;
-}
 .container2{
-    display: flex;
-    justify-content: space-around;
-}
-.container2 *{
-    object-fit: contain;
-    height: 50%; width: 50%;
+    background-image: url(../images/tech.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .container3{
-    background-color: blue;
+    background-image: url(../images/coursed.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .container4{
-    background-color: red;
+    background-color: transparent;
+    background-image: url(../images/projects.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.acolor{
+    color: white;
 }
 
+.central{
+    z-index: 100;
+}
 
 
 
 /* Segunda pantalla */
 .gcontenido2{
-    height: 100vh; width: 100%;
+    height: 100%; width: 100%;
     background-color: red;
 }
 
@@ -308,6 +326,9 @@ body::-webkit-scrollbar{
     align-items: center;
     justify-content: space-around;
     height: 100%; width: 100%;
+}
+.form-contacto *:focus{
+    outline: none;
 }
 .formularios{
     border-radius: 20px;

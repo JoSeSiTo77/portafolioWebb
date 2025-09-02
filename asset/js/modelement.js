@@ -3,14 +3,13 @@ const tbienvenida=document.querySelector(".tbienvenida");
 respaldo.addEventListener('animationend', () => {
     respaldo.style.display ='none';
     tbienvenida.style.display="none";
+    main.style.opacity="1";
 });
  */
 
 const contactame=document.querySelector(".contactame");
 const gcontenido3=document.querySelector(".gcontenido3");
 const main=document.querySelector(".main");
-const footer=document.querySelector(".footer");
-const introduccion=document.querySelector(".introduccion");
 
 
 
@@ -21,13 +20,13 @@ contactame.addEventListener("click", ()=>{
         contactame.textContent="Cancelar";
         main.style.opacity="0";
         footer.style.opacity="0";
+        footer2.style.opacity="0";
         introduccion.innerHTML="Buena elección";
     }else{
         contactame.textContent="Contactar";
         main.style.opacity="1";
         footer.style.opacity="1";
-        introduccion.innerHTML="Estoy listo para ti, listo para cumplir tu requisito, listo para cumplir tus sueños a manera web, listo para desarrollar, <br>¿Tú estás listo para mí?<br><b>Contáctame ahora:</b></p>";
-    } 
+        introduccion.innerHTML="Estoy listo para ti, listo para cumplir tu requisito, listo para cumplir tus sueños a manera web, listo para desarrollar, <br>¿Tú estás listo para mí?<br><b>Contáctame ahora:</b>";
 
-    
+    } 
 });
