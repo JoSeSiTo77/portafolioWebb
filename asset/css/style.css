@@ -136,18 +136,18 @@ body::-webkit-scrollbar{
 .linea{
     width: 100%;
     animation-duration: 1000ms;
-    /* animation-delay: 9s; */
+    animation-delay: 9s;
 }
 .nombre{
     color: white;
     font-size: 50px;
     animation-duration: 1000ms;
-    /* animation-delay: 9s; */
+    animation-delay: 9s;
 }
 .introduccion{
     font-size: 20px;
     font-weight: normal;
-   /* animation-delay: 9.1s; */
+   animation-delay: 9.1s;
 }
 .contactame{
     text-decoration: none;
@@ -158,7 +158,7 @@ body::-webkit-scrollbar{
     width: 35%;
     cursor: pointer;
     transition: background-color 350ms;
-    /* animation-delay: 9.2s; */
+    animation-delay: 9.2s;
 }
 .contactame:hover{
     background-color: rgba(255, 255, 255, 0.767);
@@ -358,5 +358,6 @@ body::-webkit-scrollbar{
 .formulario::placeholder{
     color: black;
 }
+
 
 
