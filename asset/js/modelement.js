@@ -1,11 +1,11 @@
-/* const respaldo=document.querySelector('.respaldo');
+const respaldo=document.querySelector('.respaldo');
 const tbienvenida=document.querySelector(".tbienvenida");
 respaldo.addEventListener('animationend', () => {
     respaldo.style.display ='none';
     tbienvenida.style.display="none";
     main.style.opacity="1";
 });
- */
+
 
 const contactame=document.querySelector(".contactame");
 const gcontenido3=document.querySelector(".gcontenido3");
@@ -29,4 +29,5 @@ contactame.addEventListener("click", ()=>{
         introduccion.innerHTML="Estoy listo para ti, listo para cumplir tu requisito, listo para cumplir tus sueños a manera web, listo para desarrollar, <br>¿Tú estás listo para mí?<br><b>Contáctame ahora:</b>";
 
     } 
+
 });
