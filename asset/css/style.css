@@ -157,7 +157,7 @@ body::-webkit-scrollbar{
     border-radius: 20px;
     width: 35%;
     cursor: pointer;
-    transition: background-color 350ms;
+    transition: background-color 350ms, transition 350ms;
     animation-delay: 9.2s;
 }
 .contactame:hover{
@@ -359,6 +359,7 @@ body::-webkit-scrollbar{
 .formulario::placeholder{
     color: black;
 }
+
 
 
 
