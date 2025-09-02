@@ -164,7 +164,8 @@ body::-webkit-scrollbar{
     background-color: rgba(255, 255, 255, 0.767);
 }
 .contactamedes{
-    display: none;
+    opacity: 0;
+    pointer-events:none;
 }
 
 /* Contenedores de información general */
@@ -358,6 +359,7 @@ body::-webkit-scrollbar{
 .formulario::placeholder{
     color: black;
 }
+
 
 
 
