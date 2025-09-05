@@ -29,87 +29,6 @@ body::-webkit-scrollbar{
     height: 100%;
 }
 
-/* Pantalla de bienvenida + animaciones*/
-.tbienvenida{
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    z-index: 11;
-    font-family: "mifuente";
-    animation: aparece 4s linear forwards,
-                desaparecertb 2s 5s cubic-bezier(.38,.76,.58,.37) forwards;
-}
-.respaldo{
-    background-color: black;
-    width: 100%; height: 100%;
-    animation: desaparece 3s 6s linear forwards;
-    z-index: 10;
-}
-.bienvenida {
-    opacity: 0;
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background-color: black;
-    background-image: linear-gradient(to bottom right, transparent 45%, rgba(11, 2, 65, 0.85) 50%, rgba(11, 2, 65, 0.85) 54%, #0a0131 62%, rgba(29, 8, 134, 0) 72%);
-    background-size: 1000% 1000%;
-    background-repeat: no-repeat;
-    animation: aparece 2s linear forwards,
-                desaparece 4s 6s linear forwards,
-                movimientodiago 10s cubic-bezier(.38,.76,.58,.37);
-}
-
-@keyframes aparece {
-    50%{
-        opacity:.5;
-    }
-    100%{ 
-        opacity: 1; 
-    }
-}
-@keyframes desaparece {
-    0%{ 
-        opacity: 1;
-    }
-    25%{ 
-        opacity: .6;
-    }
-    50%{ 
-        opacity: .4; 
-    }
-    75%{
-        opacity: .2;
-    }
-    100%{ 
-        opacity: 0;
-        z-index: 0;
-    }  
-}
-@keyframes desaparecertb {
-    to{
-        opacity: 0;
-    }
-}
-@keyframes movimientodiago {
-    0%{
-        background-position: -50% -50%; 
-    }
-    30%{
-        background-position: 20% 20%; 
-    }45%{
-        background-position: 45% 45%;
-    }55%{
-        background-position: 55% 55%;
-    }
-    75%{
-        background-position: 95% 95%;
-    }
-    100%{
-        background-position: 150% 150%; 
-    }
-}
-
 .gcontenido *{
     display: none;
 }
@@ -118,7 +37,7 @@ body::-webkit-scrollbar{
     flex-direction: column;
 }
 
-/* Presentación principal más animaciones */
+
 .section *{
     display: block;
     margin-top: 10%;
@@ -135,20 +54,27 @@ body::-webkit-scrollbar{
 }
 .linea{
     width: 100%;
-    animation-duration: 1000ms;
-    animation-delay: 9s;
+    animation-duration: 800ms;
+    animation-delay: 100ms;
 }
 .nombre{
     color: white;
     font-size: 50px;
-    animation-duration: 1000ms;
-    animation-delay: 9s;
+    animation-duration: 800ms;
+    animation-delay: 200ms;
 }
 .introduccion{
     font-size: 20px;
     font-weight: normal;
-   animation-delay: 9.1s;
+    animation-delay: 300ms;
+    white-space: normal;
 }
+
+.introduccion *{
+    display: inline;
+    white-space:pre-wrap;
+}
+
 .contactame{
     text-decoration: none;
     padding: 5%;
@@ -157,9 +83,9 @@ body::-webkit-scrollbar{
     border-radius: 20px;
     width: 35%;
     cursor: pointer;
-    transition: background-color 350ms, transition 1.5s;
-    animation-delay: 9.2s;
+    transition: background-color 350ms;
 }
+
 .contactame:hover{
     background-color: rgba(255, 255, 255, 0.767);
 }
@@ -182,7 +108,7 @@ body::-webkit-scrollbar{
     height: 100%; width: 70%;
     transition: opacity 350ms;
     margin-left: 30%;
-    animation-delay: 9.4s;
+    animation-delay: 300ms;
 }
 .containers{
     position: absolute;
